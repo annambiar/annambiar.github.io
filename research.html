@@ -8,44 +8,23 @@
   <link href="css/docs.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <style>
-    /* --- tidy spacing + readable line length --- */
-    .bs-docs-header { padding: 28px 0 18px; }
-    .bs-docs-header .lead { max-width: 960px; line-height: 1.55; }
-    h3 { margin-top: 30px; margin-bottom: 12px; }
-
-    /* --- clean project card using Bootstrap media object --- */
+    /* compact header + clean project cards */
+    .bs-docs-header { padding: 24px 0 14px; }
     .proj-card {
-      border: 1px solid #e5e5e5;
-      border-radius: 6px;
-      padding: 16px 18px;
-      margin-bottom: 22px;
-      overflow: hidden;
-      background: #fff;
+      border: 1px solid #e5e5e5; border-radius: 6px;
+      padding: 16px 18px; margin-bottom: 22px; background: #fff;
     }
     .proj-card .media { margin: 0; }
     .proj-card .media-body { line-height: 1.6; overflow-wrap: break-word; }
-    .proj-card .media-right { padding-left: 16px; }
-    .proj-card .media-object {
-      max-width: 240px;
-      height: auto;
-      border-radius: 6px;
-    }
-    @media (max-width: 767px) {
-      .proj-card .media-right { padding-left: 0; margin-top: 12px; }
-      .proj-card .media-object { max-width: 100%; }
-    }
-
-    /* --- publication list --- */
+    .proj-card .media-object { max-width: 240px; height: auto; border-radius: 6px; }
     .paper-list { margin: 6px 0 0 0; padding-left: 18px; }
     .paper-list li { margin: 4px 0; }
     .paper-list small { color: #666; }
-
-    /* --- misc polish --- */
-    .label { vertical-align: middle; }
     footer small { color: #777; }
+    @media (max-width:767px){ .proj-card .media-object{max-width:100%; margin-bottom:8px;} }
   </style>
 </head>
-<body>
+<body style="padding-top:60px;"><!-- prevents navbar from cutting off header -->
 
 <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
   <div class="container">
@@ -66,21 +45,23 @@
   </div>
 </header>
 
-<div class="bs-docs-header" id="content" style="background:#990000;color:#fff; margin-bottom:28px;">
+<div class="bs-docs-header" id="content" style="background:#990000;color:#fff;margin-bottom:28px;">
   <div class="container">
     <h2>Research</h2>
   </div>
 </div>
 
-
 <div class="container bs-docs-container">
 
   <!-- ==================== Multi-Omic Integration ==================== -->
   <div class="bs-docs-section">
-    <h3>Deep Learning for Multi-Omic Integration</h3>
+    <h3 style="margin-bottom:8px;">Deep Learning for Multi-Omic Integration</h3>
   </div>
-  <div class="proj-card">
+  <div class="proj-card" style="margin-top:6px;">
     <div class="media">
+      <div class="media-left hidden-xs">
+        <img class="media-object" src="src/placeholder_multiomic.png" alt="Multi-omic integration (placeholder)">
+      </div>
       <div class="media-body">
         <p>
           I am developing interpretable methods for <b>multi-omic data integration</b> to link diverse biological
@@ -88,26 +69,27 @@
           systems jointly influence health and disease.
         </p>
         <p><span class="label label-info">Status</span> Ongoing project</p>
-        <p><b>Collaborators:</b> William Stafford Noble (University of Washington) and  the MOHD Consortium.</p>
-      </div>
-      <div class="media-right hidden-xs">
-        <img class="media-object" src="src/placeholder_multiomic.png" alt="Multi-omic integration (placeholder)">
+        <p><b>Collaborators:</b> William Stafford Noble (University of Washington) and the MOHD Consortium.</p>
       </div>
     </div>
   </div>
 
   <!-- ==================== PLMs ==================== -->
   <div class="bs-docs-section">
-    <h3>Protein Language Models and Protein Science</h3>
+    <h3 style="margin-bottom:8px;">Protein Language Models and Protein Science</h3>
   </div>
-  <div class="proj-card">
+  <div class="proj-card" style="margin-top:6px;">
     <div class="media">
+      <div class="media-left hidden-xs">
+        <img class="media-object" src="src/placeholder_plm.png" alt="Protein language model (placeholder)">
+      </div>
       <div class="media-body">
-        <p>I develop and analyze <b>protein language models (PLMs)</b> to understand how evolutionary information is encoded in protein sequences.
-  My work spans <b>model development, biological interpretation, and applications</b> — from early transformer architectures that learn structural
-  and functional features directly from sequence, to specialized models for intrinsically disordered proteins, and to recent work uncovering how
-  PLMs represent <b>epistasis, fitness landscapes, and evolutionary constraints</b>. Collectively, these efforts aim to make protein language models
-  more <b>interpretable and useful for protein science and engineering</b>.
+        <p>
+          I develop and analyze <b>protein language models (PLMs)</b> to understand how evolutionary information is encoded in protein sequences.
+          My work spans <b>model development, biological interpretation, and applications</b>—from early transformer architectures that learn
+          structural and functional features directly from sequence, to specialized models for intrinsically disordered proteins, and to recent
+          studies of how PLMs represent <b>epistasis, fitness landscapes, and evolutionary constraints</b>. Collectively, these efforts aim to make
+          PLMs more <b>interpretable and useful for protein science and engineering</b>.
         </p>
         <p><b>Selected publications:</b></p>
         <ul class="paper-list">
@@ -116,40 +98,42 @@
           <li><a href="https://dl.acm.org/doi/10.1145/3388440.3412467" target="_blank">Transforming the Language of Life: Transformer Neural Networks for Protein Prediction Tasks</a> <small>(ACM BCB, 2020)</small></li>
           <li><a href="https://cshperspectives.cshlp.org/content/early/2025/XX/XX/a041877" target="_blank">Machine Learning for Protein Science and Engineering</a> <small>(Cold Spring Harbor Perspectives in Biology, 2025)</small></li>
         </ul>
-        <p><b>Collaborators:</b> Sergei Maslov (UIUC), Mark Hopkins (Reed College), Anna Ritz (Reed College), Simon Liu (NYU), Malcolm Forsyth (UIUC), Carlos Cuellar (UIUC), Sayantani Basu (UIUC), Shivani Ahuja (Reed College), Greg Anderson (Reed College)</p>
-      </div>
-      <div class="media-right hidden-xs">
-        <img class="media-object" src="src/placeholder_plm.png" alt="Protein language model (placeholder)">
+        <p><b>Collaborators:</b> Sergei Maslov (UIUC), Mark Hopkins (Reed College), Anna Ritz (Reed College), Simon Liu (NYU),
+          Malcolm Forsyth (UIUC), Carlos Cuellar (UIUC), Sayantani Basu (UIUC), Shivani Ahuja (Reed College), Greg Anderson (Reed College)
+        </p>
       </div>
     </div>
   </div>
 
   <!-- ==================== ML-Guided GWAS ==================== -->
   <div class="bs-docs-section">
-    <h3>Machine-Learning-Guided GWAS and Disease Prediction</h3>
+    <h3 style="margin-bottom:8px;">Machine-Learning-Guided GWAS and Disease Prediction</h3>
   </div>
-  <div class="proj-card">
+  <div class="proj-card" style="margin-top:6px;">
     <div class="media">
+      <div class="media-left hidden-xs">
+        <img class="media-object" src="src/placeholder_gwas.png" alt="GWAS schematic (placeholder)">
+      </div>
       <div class="media-body">
         <p>
           I apply <b>machine learning</b> to enhance genome-wide association studies, integrating clinical,
           environmental, and genetic data to uncover patterns underlying complex diseases.
         </p>
         <p><span class="label label-info">Status</span> Ongoing project</p>
-        <p><b>Collaborators:</b> Sergei Maslov (UIUC), Sharon Donovan (UIUC), Konstantinos Lazaridis (Mayo) and Alina Allen (Mayo).</p>
-      </div>
-      <div class="media-right hidden-xs">
-        <img class="media-object" src="src/placeholder_gwas.png" alt="GWAS schematic (placeholder)">
+        <p><b>Collaborators:</b> Sergei Maslov (UIUC), Sharon Donovan (UIUC), Konstantinos Lazaridis (Mayo), Alina Allen (Mayo).</p>
       </div>
     </div>
   </div>
 
   <!-- ==================== Transcriptional Regulation ==================== -->
   <div class="bs-docs-section">
-    <h3>Transcriptional Regulation and Functional Genomics</h3>
+    <h3 style="margin-bottom:8px;">Transcriptional Regulation and Functional Genomics</h3>
   </div>
-  <div class="proj-card">
+  <div class="proj-card" style="margin-top:6px;">
     <div class="media">
+      <div class="media-left hidden-xs">
+        <img class="media-object" src="src/placeholder_trn.png" alt="Regulatory network (placeholder)">
+      </div>
       <div class="media-body">
         <p>
           I build models linking <b>promoter sequence, transcription-factor activity, and chromatin context</b>
@@ -162,20 +146,20 @@
           <li><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011563" target="_blank">FUN-PROSE: A Deep Learning Approach to Predict Condition-Specific Gene Expression in Fungi</a> <small>(PLoS Comput Biol, 2023)</small></li>
           <li><a href="https://journals.asm.org/doi/10.1128/spectrum.02536-23" target="_blank">A Transcriptomic Atlas of Acute Stress Response to Low pH in Multiple <i>Issatchenkia orientalis</i> Strains</a> <small>(Microbiology Spectrum, 2024)</small></li>
         </ul>
-        <p><b>Collaborators:</b>  Sergei Maslov (UIUC), Veronika Dubinkina (Gladstone Institutes), Simon Liu (NYU).</p>
-      </div>
-      <div class="media-right hidden-xs">
-        <img class="media-object" src="src/placeholder_trn.png" alt="Regulatory network (placeholder)">
+        <p><b>Collaborators:</b> Sergei Maslov (UIUC), Veronika Dubinkina (Gladstone Institutes), Simon Liu (NYU).</p>
       </div>
     </div>
   </div>
 
   <!-- ==================== Diagnostics ==================== -->
   <div class="bs-docs-section">
-    <h3>Diagnostics and Complex-Systems Methodology</h3>
+    <h3 style="margin-bottom:8px;">Diagnostics and Complex-Systems Methodology</h3>
   </div>
-  <div class="proj-card">
+  <div class="proj-card" style="margin-top:6px;">
     <div class="media">
+      <div class="media-left hidden-xs">
+        <img class="media-object" src="src/placeholder_diag.png" alt="Group testing schematic (placeholder)">
+      </div>
       <div class="media-body">
         <p>
           I apply ideas from information theory and complex systems to biomedical diagnostics.
@@ -186,20 +170,20 @@
         <ul class="paper-list">
           <li><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-024-05798-3" target="_blank">Semi-Quantitative Group Testing for Efficient and Accurate qPCR Screening of Pathogens with a Wide Range of Loads</a> <small>(BMC Bioinformatics, 2024)</small></li>
         </ul>
-        <p><b>Collaborators:</b> Sergei Maslov (UIUC) and Olgica Milenkovic (UIUC).</p>
-      </div>
-      <div class="media-right hidden-xs">
-        <img class="media-object" src="src/placeholder_diag.png" alt="Group testing schematic (placeholder)">
+        <p><b>Collaborators:</b> Sergei Maslov (UIUC), Olgica Milenkovic (UIUC).</p>
       </div>
     </div>
   </div>
 
   <!-- ==================== Evolution of Technology ==================== -->
   <div class="bs-docs-section">
-    <h3>Evolution and Classification of Technology</h3>
+    <h3 style="margin-bottom:8px;">Evolution and Classification of Technology</h3>
   </div>
-  <div class="proj-card">
+  <div class="proj-card" style="margin-top:6px;">
     <div class="media">
+      <div class="media-left hidden-xs">
+        <img class="media-object" src="src/placeholder_tech.png" alt="Technology evolution network (placeholder)">
+      </div>
       <div class="media-body">
         <p>
           I investigate <b>innovation dynamics, diversity, and recombination</b> in technological ecosystems using patent
@@ -212,9 +196,6 @@
           <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0264330" target="_blank">Dropping Diversity of Products of Large US Firms: Models and Measures</a> <small>(PLOS ONE, 2022)</small></li>
         </ul>
         <p><b>Collaborators:</b> Mark Bedau (Reed College), Norman Packard (ProtoLife), Tobias Rubel (UMD), J. Doyne Farmer (Oxford).</p>
-      </div>
-      <div class="media-right hidden-xs">
-        <img class="media-object" src="src/placeholder_tech.png" alt="Technology evolution network (placeholder)">
       </div>
     </div>
   </div>
