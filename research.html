@@ -1,135 +1,219 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head><meta charset="utf-8">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/docs.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <style>
+    .proj-card img { max-width: 260px; height: auto; border-radius: 6px; margin: 6px 0 12px; }
+    .proj-card .paper-list a { white-space: nowrap; }
+    footer small { color: #777; }
+  </style>
 </head>
-<body></body>
-</html>
-<p><br />
-<title>Research</title>
-<!-- Bootstrap core CSS --></p>
-<link href="css/bootstrap.css" rel="stylesheet" /><!-- Documentation extras -->
-<link href="css/docs.min.css" rel="stylesheet" />
-<link href="css/custom.css" rel="stylesheet" /><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
-    <script src="../assets/js/html5shiv.js"></script>
-    <script src="../assets/js/respond.min.js"></script>
-    <![endif]--><!-- Favicons --><!-- Place anything custom after this. -->
-<p><a class="sr-only" href="#content">Skip navigation</a> <!-- Docs master nav --></p>
+<body>
 
 <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-<div class="container">
-<div class="navbar-header"><button class="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span></button><a class="navbar-brand" href="index.html">Home</a></div>
-
-<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-<ul class="nav navbar-nav">
-	<li class="active"><a href="research.html">Research</a></li>
-	<li><a href="courses.html">Courses</a></li>
-	<li><a href="talks.html">External Talks</a></li>
-	<li><a href="other.html">Other Stuff</a></li>
-</ul>
-</nav>
-</div>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target=".bs-navbar-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="research.html">Research</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="talks.html">External Talks</a></li>
+        <li><a href="other.html">Other Stuff</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-<!-- Docs page layout -->
 
 <div class="bs-docs-header" id="content">
-<div class="container">
-<h2>Research</h2>
+  <div class="container">
+    <h2>Research</h2>
+    <p class="lead">
+      My research focuses on developing interpretable machine learning models for complex biological systems—
+      from multi-omic data integration and protein language models to GWAS-driven disease discovery and 
+      the study of evolutionary processes in both biology and technology.
+    </p>
+  </div>
 </div>
-</div>
-<!-- Callout for the old docs link -->
 
-<div class="container bs-docs-container"><!-- Global Bootstrap settings
-    ================================================== -->
-<div class="bs-docs-section"><!-- <h1>Research</h1> 
-    <hr>    -->
 <div class="container bs-docs-container">
-<div class="bs-docs-section">
-<h3>Cancer Drug Response Prediction</h3>
+
+  <!-- ==================== Multi-Omic Integration ==================== -->
+  <div class="bs-docs-section">
+    <h3>Multi-Omic Integration and Imputation</h3>
+  </div>
+
+  <div class="panel panel-default container proj-card">
+    <div class="row">
+      <div class="col-sm-9">
+        <p>
+          I am developing interpretable methods for <b>multi-omic data integration</b> to link diverse biological layers
+          such as gene expression, epigenomics, and proteomics. This work aims to improve our understanding of how
+          molecular systems jointly influence health and disease.
+        </p>
+        <p><b>Status:</b> Ongoing project</p>
+        <p><b>Collaborators:</b> William Stafford Noble (University of Washington) and colleagues in the MOHD Consortium.</p>
+      </div>
+      <div class="col-sm-3 text-center">
+        <img src="src/placeholder_multiomic.png" alt="Multi-omic integration (placeholder)">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PLMs ==================== -->
+  <div class="bs-docs-section">
+    <h3>Protein Language Models and Protein Science</h3>
+  </div>
+
+  <div class="panel panel-default container proj-card">
+    <div class="row">
+      <div class="col-sm-9">
+        <p>
+          I study how <b>protein language models (PLMs)</b> capture structure, function, and evolution from sequence alone.
+          My work demonstrates that PLMs encode residue dependencies, predict mutation effects, and represent 
+          higher-order <b>epistasis</b>, with strong zero-shot generalization to experimental fitness landscapes.
+        </p>
+        <p class="paper-list">
+          <b>Selected publications:</b><br>
+          • <a href="https://www.biorxiv.org/content/10.1101/2025.09.14.676130v1" target="_blank">Protein Language Models Capture Structural and Functional Epistasis in a Zero-Shot Setting</a> (bioRxiv, 2025)<br>
+          • <a href="https://www.cell.com/structure/fulltext/S0969-2126%2824%2900136-9" target="_blank">DR-BERT: A Protein Language Model to Annotate Disordered Regions</a> (Structure, 2024)<br>
+          • <a href="https://dl.acm.org/doi/10.1145/3388440.3412467" target="_blank">Transforming the Language of Life: Transformer Neural Networks for Protein Prediction Tasks</a> (ACM BCB, 2020)<br>
+          • <a href="https://cshperspectives.cshlp.org/content/early/2025/XX/XX/a041877" target="_blank">Machine Learning for Protein Science and Engineering</a> (CSH Perspectives in Biology, 2025)
+        </p>
+        <p><b>Collaborators:</b> Mark Hopkins (Reed College), Anna Ritz (Reed College), Sergei Maslov (UIUC), Simon Liu (NYU), Patrick K. Koo.</p>
+      </div>
+      <div class="col-sm-3 text-center">
+        <img src="src/placeholder_plm.png" alt="Protein language model attention map (placeholder)">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ML-Guided GWAS ==================== -->
+  <div class="bs-docs-section">
+    <h3>Machine-Learning-Guided GWAS and Disease Prediction</h3>
+  </div>
+
+  <div class="panel panel-default container proj-card">
+    <div class="row">
+      <div class="col-sm-9">
+        <p>
+          I apply <b>machine learning</b> to enhance genome-wide association studies, integrating
+          clinical, environmental, and genetic data to uncover patterns that underlie complex diseases.
+        </p>
+        <p><b>Status:</b> Ongoing project</p>
+        <p><b>Collaborators:</b> William Stafford Noble (University of Washington) and the Mayo Clinic Center for Individualized Medicine.</p>
+      </div>
+      <div class="col-sm-3 text-center">
+        <img src="src/placeholder_gwas.png" alt="GWAS schematic (placeholder)">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Transcriptional Regulation ==================== -->
+  <div class="bs-docs-section">
+    <h3>Transcriptional Regulation and Functional Genomics</h3>
+  </div>
+
+  <div class="panel panel-default container proj-card">
+    <div class="row">
+      <div class="col-sm-9">
+        <p>
+          I build models linking <b>promoter sequence, transcription-factor activity, and chromatin context</b> to gene-expression programs.
+          In <i>FUN-PROSE</i>, we predicted condition-specific expression in fungi from sequence and TF abundance, revealing interpretable motif–TF relationships.
+          I also contributed to a <i>transcriptomic atlas</i> of acid-stress response in multiple <i>Issatchenkia orientalis</i> strains, 
+          mapping conserved regulatory pathways underlying adaptation.
+        </p>
+        <p class="paper-list">
+          <b>Selected publications:</b><br>
+          • <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011563" target="_blank">FUN-PROSE: A Deep Learning Approach to Predict Condition-Specific Gene Expression in Fungi</a> (PLoS Comput Biol, 2023)<br>
+          • <a href="https://journals.asm.org/doi/10.1128/spectrum.02536-23" target="_blank">A Transcriptomic Atlas of Acute Stress Response to Low pH in Multiple <i>Issatchenkia orientalis</i> Strains</a> (Microbiology Spectrum, 2024)
+        </p>
+        <p><b>Collaborators:</b> Veronika Dubinkina (Gladstone Institutes), Sergei Maslov (UIUC), Simon Liu (NYU).</p>
+      </div>
+      <div class="col-sm-3 text-center">
+        <img src="src/placeholder_trn.png" alt="Regulatory motif or gene network diagram (placeholder)">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Diagnostics ==================== -->
+  <div class="bs-docs-section">
+    <h3>Diagnostics and Complex-Systems Methodology</h3>
+  </div>
+
+  <div class="panel panel-default container proj-card">
+    <div class="row">
+      <div class="col-sm-9">
+        <p>
+          I apply ideas from information theory and complex systems to biomedical diagnostics. 
+          Our <i>semi-quantitative group testing</i> framework enables efficient, accurate two-stage qPCR screening 
+          of pathogens across wide load ranges, achieving high throughput while preserving quantitative resolution.
+        </p>
+        <p class="paper-list">
+          <b>Selected publication:</b>
+          <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-024-05798-3" target="_blank">Semi-Quantitative Group Testing for Efficient and Accurate qPCR Screening of Pathogens with a Wide Range of Loads</a> (BMC Bioinformatics, 2024)
+        </p>
+        <p><b>Collaborators:</b> Mojtaba Cheraghchi (Imperial College London), Sergei Maslov (UIUC).</p>
+      </div>
+      <div class="col-sm-3 text-center">
+        <img src="src/placeholder_diag.png" alt="Group testing schematic (placeholder)">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Evolution of Technology ==================== -->
+  <div class="bs-docs-section">
+    <h3>Evolution and Classification of Technology</h3>
+  </div>
+
+  <div class="panel panel-default container proj-card">
+    <div class="row">
+      <div class="col-sm-9">
+        <p>
+          I investigate <b>innovation dynamics, diversity, and recombination</b> in technological ecosystems using patent and product datasets.
+          We modeled how novelty sustains open-ended innovation and quantified a long-term decline in product diversity among large U.S. firms.
+        </p>
+        <p class="paper-list">
+          <b>Selected publications:</b><br>
+          • <a href="https://direct.mit.edu/artl/article/25/1/33/2647/Open-Ended-Technological-Innovation" target="_blank">Open-Ended Technological Innovation</a> (Artificial Life, 2019)<br>
+          • <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0264330" target="_blank">Dropping Diversity of Products of Large US Firms: Models and Measures</a> (PLOS ONE, 2022)
+        </p>
+        <p><b>Collaborators:</b> Mark Bedau (Reed College), Norman Packard (ProtoLife), Tobias Rubel (UMD), J. Doyne Farmer (Oxford).</p>
+      </div>
+      <div class="col-sm-3 text-center">
+        <img src="src/placeholder_tech.png" alt="Technology evolution network (placeholder)">
+      </div>
+    </div>
+  </div>
+
 </div>
-</div>
-
-<div align="" class="panel panel-default container">
-
-<p>I am currently a part of <a href="http://maslov.bioengineering.illinois.edu/">Sergei Maslov</a>&#39;s&nbsp;lab where I work on a <a href="https://www.anl.gov/article/cancers-big-data-problem">project</a>&nbsp;at Argonne National Lab on using machine learning for cancer drug response prediction. My niche in this project is interpretable machine learning models that can be used to understand cancer biology in addition to predicting drug response.</p>
-</div>
-
-<h3>Computing the Language of Life</h3>
-</div>
-</div>
-
-<div align="" class="panel panel-default container">
-<figure><img align="right" alt="Reed" class="img-rounded" height="250" id="me" src="src/samp_conf1n.png" width="250" /></figure>
-
-<p>In collaboration with&nbsp;&nbsp;<a href="http://markandrewhopkins.com/">Mark Hopkins</a> (Reed C.) and <a href="https://www.reed.edu/biology/ritz/">Anna Ritz</a> (Reed C.), I am currently studying the use of machine learning in predicting the function of proteins based on the primary sequence alone. Focus is on treating protein sequences as a language and adapting ideas from natural language processing to learn biologically relevant features of proteins.&nbsp;</p>
-</div>
-
-<div class="container bs-docs-container"><!-- Global Bootstrap settings
-    ================================================== -->
-<div class="bs-docs-section"><!-- <h1>Research</h1> 
-    <hr>    -->
-<h3>Evolution &amp; Classification of Technology</h3>
-</div>
-</div>
-
-<div align="" class="panel panel-default container">
-<figure><img align="right" alt="Threads" class="img-rounded" height="250" id="me" src="src/global_threads_dth0.8.png" width="250" /></figure>
-
-<p>Collaborating with&nbsp;&nbsp;<a href="http://people.reed.edu/~mab/">Mark Bedau</a> (Reed C.),&nbsp;<a href="https://protolife.com/people">Norman Packard</a> (ProtoLife) and <a href="https://www.inet.ox.ac.uk/people/j-doyne-farmer/">Doyne Farmer</a> (Oxford), I am currently working on two different projects&nbsp;studying the evolution of&nbsp; real non-biological systems using patent records and financial report forms. The first project involves studying an evolving classification&nbsp;of technology while the other aims to predict the dynamics of technological ecosystems.&nbsp;</p>
-</div>
-
-<div class="container bs-docs-container"><!-- Global Bootstrap settings
-    ================================================== -->
-<div class="bs-docs-section"><!-- <h1>Research</h1> 
-    <hr>    -->
-<h3>Controllability of Complex Networks</h3>
-</div>
-</div>
-
-<div align="" class="panel panel-default container">
-<figure><img align="right" alt="A network of pro-ISIS users" class="img-rounded" height="250" id="me" src="src/grn_white.png" width="250" /></figure>
-
-<p>In 2017, under the supervision of <a href="https://www.santafe.edu/people/profile/sanjay-jain">Sajay Jain</a> (U. Delhi &amp; Santa Fe Inst.) at the Department of Physics and Astrophysics at the University of Delhi, I explored the controllability of complex networks. Specifically, I studied the role of metabolites in the controllability of the E.coli genetic regulatory network. I also studying the target controllability of different functional classes of E. coli genes and the relationship between the target controllability and the function of the class of genes.</p>
-
-<p>I presented results from this project as a poster at the <a href="https://www.siam.org/Portals/0/Conferences/AN18/AN18%20Program%20Book%20AND%20Abstracts%20(UPDATED).pdf?ver=2018-07-26-115459-590">2018 SIAM Annual Meeting</a> and as a research talk at the 2018 Pacific Northwest Quantitative Biology Symposium.</p>
-</div>
-
-<div class="container bs-docs-container"><!-- Global Bootstrap settings
-    ================================================== -->
-<div class="bs-docs-section"><!-- <h1>Research</h1> 
-    <hr>    -->
-<h3>An Analysis of Pro-Terrorist Users on Twitter</h3>
-</div>
-</div>
-
-<div align="" class="panel panel-default container">
-<figure><img align="right" alt="A network of pro-ISIS users" class="img-rounded" height="300" id="me" src="src/network.jpg" width="350" /></figure>
-
-<p>At the end of my Freshman year, I applied the theory of complex networks to terrorist networks on social media under the supervision of <a href="https://umexpert.um.edu.my/kuru.html">Kurunathan Ratnavelu</a> (U. Malaya) at the Institute for Mathematical Sciences. The data used for this project was compiled by Fifth Tribe, a digital agency based out of Washington DC. I found that the network of pro-terror twitter users studied could be described by a scale-free model. I then studied the effect of selectively deleting nodes on the network as a whole.</p>
-
-<p>Preliminary results on the structure of the network and the effect of selectively removing nodes were presented to faculty members of the Institute of Mathematical Sciences. A report was also submitted to the Institute.</p>
-</div>
-<!-- Footer
-    ================================================== -->
 
 <footer role="contentinfo" style="margin-top:40px">
-<div id="footer">
-<div class="well well-sm">
-<div class="container">
-<div class="row">
-<div class="col-md-2">
-<h4>Get in touch!</h4>
-</div>
-
-<div class="col-md-6">
-<h4>E-mail me at: annambiar [at] reed [dot] edu</h4>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div id="footer">
+    <div class="well well-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"><h4>Get in touch!</h4></div>
+          <div class="col-md-6"><h4>Email me at: annambiar [at] reed [dot] edu</h4></div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-12"><small>Last updated: October 14, 2025</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
-<!-- JS and analytics only. --><!-- Bootstrap core JavaScript
-    ================================================== --><!-- Placed at the end of the document so the pages load faster --><script type="text/javascript" src="js/jquery.min.js"></script><script type="text/javascript " src="js/bootstrap.min.js"></script><!-- <script type="text/javascript " src="js/application.htm"></script>
-<script type="text/javascript " src="js/run_prettify.htm"></script>
---><!-- Analytics
-    ================================================== -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
