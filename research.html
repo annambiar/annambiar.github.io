@@ -8,8 +8,40 @@
   <link href="css/docs.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <style>
-    .proj-card img { max-width: 260px; height: auto; border-radius: 6px; margin: 6px 0 12px; }
-    .proj-card .paper-list a { white-space: nowrap; }
+    /* --- tidy spacing + readable line length --- */
+    .bs-docs-header { padding: 28px 0 18px; }
+    .bs-docs-header .lead { max-width: 960px; line-height: 1.55; }
+    h3 { margin-top: 30px; margin-bottom: 12px; }
+
+    /* --- clean project card using Bootstrap media object --- */
+    .proj-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      padding: 16px 18px;
+      margin-bottom: 22px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .proj-card .media { margin: 0; }
+    .proj-card .media-body { line-height: 1.6; overflow-wrap: break-word; }
+    .proj-card .media-right { padding-left: 16px; }
+    .proj-card .media-object {
+      max-width: 240px;
+      height: auto;
+      border-radius: 6px;
+    }
+    @media (max-width: 767px) {
+      .proj-card .media-right { padding-left: 0; margin-top: 12px; }
+      .proj-card .media-object { max-width: 100%; }
+    }
+
+    /* --- publication list --- */
+    .paper-list { margin: 6px 0 0 0; padding-left: 18px; }
+    .paper-list li { margin: 4px 0; }
+    .paper-list small { color: #666; }
+
+    /* --- misc polish --- */
+    .label { vertical-align: middle; }
     footer small { color: #777; }
   </style>
 </head>
@@ -34,12 +66,12 @@
   </div>
 </header>
 
-<div class="bs-docs-header" id="content">
+<div class="bs-docs-header" id="content" style="background:#990000;color:#fff;">
   <div class="container">
     <h2>Research</h2>
     <p class="lead">
       My research focuses on developing interpretable machine learning models for complex biological systems—
-      from multi-omic data integration and protein language models to GWAS-driven disease discovery and 
+      from multi-omic data integration and protein language models to GWAS-driven disease discovery and
       the study of evolutionary processes in both biology and technology.
     </p>
   </div>
@@ -51,20 +83,19 @@
   <div class="bs-docs-section">
     <h3>Multi-Omic Integration and Imputation</h3>
   </div>
-
-  <div class="panel panel-default container proj-card">
-    <div class="row">
-      <div class="col-sm-9">
+  <div class="proj-card">
+    <div class="media">
+      <div class="media-body">
         <p>
-          I am developing interpretable methods for <b>multi-omic data integration</b> to link diverse biological layers
-          such as gene expression, epigenomics, and proteomics. This work aims to improve our understanding of how
-          molecular systems jointly influence health and disease.
+          I am developing interpretable methods for <b>multi-omic data integration</b> to link diverse biological
+          layers such as gene expression, epigenomics, and proteomics. This work aims to clarify how molecular
+          systems jointly influence health and disease.
         </p>
-        <p><b>Status:</b> Ongoing project</p>
+        <p><span class="label label-info">Status</span> Ongoing project</p>
         <p><b>Collaborators:</b> William Stafford Noble (University of Washington) and colleagues in the MOHD Consortium.</p>
       </div>
-      <div class="col-sm-3 text-center">
-        <img src="src/placeholder_multiomic.png" alt="Multi-omic integration (placeholder)">
+      <div class="media-right hidden-xs">
+        <img class="media-object" src="src/placeholder_multiomic.png" alt="Multi-omic integration (placeholder)">
       </div>
     </div>
   </div>
@@ -73,26 +104,25 @@
   <div class="bs-docs-section">
     <h3>Protein Language Models and Protein Science</h3>
   </div>
-
-  <div class="panel panel-default container proj-card">
-    <div class="row">
-      <div class="col-sm-9">
+  <div class="proj-card">
+    <div class="media">
+      <div class="media-body">
         <p>
           I study how <b>protein language models (PLMs)</b> capture structure, function, and evolution from sequence alone.
-          My work demonstrates that PLMs encode residue dependencies, predict mutation effects, and represent 
+          My work demonstrates that PLMs encode residue dependencies, predict mutation effects, and represent
           higher-order <b>epistasis</b>, with strong zero-shot generalization to experimental fitness landscapes.
         </p>
-        <p class="paper-list">
-          <b>Selected publications:</b><br>
-          • <a href="https://www.biorxiv.org/content/10.1101/2025.09.14.676130v1" target="_blank">Protein Language Models Capture Structural and Functional Epistasis in a Zero-Shot Setting</a> (bioRxiv, 2025)<br>
-          • <a href="https://www.cell.com/structure/fulltext/S0969-2126%2824%2900136-9" target="_blank">DR-BERT: A Protein Language Model to Annotate Disordered Regions</a> (Structure, 2024)<br>
-          • <a href="https://dl.acm.org/doi/10.1145/3388440.3412467" target="_blank">Transforming the Language of Life: Transformer Neural Networks for Protein Prediction Tasks</a> (ACM BCB, 2020)<br>
-          • <a href="https://cshperspectives.cshlp.org/content/early/2025/XX/XX/a041877" target="_blank">Machine Learning for Protein Science and Engineering</a> (CSH Perspectives in Biology, 2025)
-        </p>
+        <p><b>Selected publications:</b></p>
+        <ul class="paper-list">
+          <li><a href="https://www.biorxiv.org/content/10.1101/2025.09.14.676130v1" target="_blank">Protein Language Models Capture Structural and Functional Epistasis in a Zero-Shot Setting</a> <small>(bioRxiv, 2025)</small></li>
+          <li><a href="https://www.cell.com/structure/fulltext/S0969-2126%2824%2900136-9" target="_blank">DR-BERT: A Protein Language Model to Annotate Disordered Regions</a> <small>(Structure, 2024)</small></li>
+          <li><a href="https://dl.acm.org/doi/10.1145/3388440.3412467" target="_blank">Transforming the Language of Life: Transformer Neural Networks for Protein Prediction Tasks</a> <small>(ACM BCB, 2020)</small></li>
+          <li><a href="https://cshperspectives.cshlp.org/content/early/2025/XX/XX/a041877" target="_blank">Machine Learning for Protein Science and Engineering</a> <small>(Cold Spring Harbor Perspectives in Biology, 2025)</small></li>
+        </ul>
         <p><b>Collaborators:</b> Mark Hopkins (Reed College), Anna Ritz (Reed College), Sergei Maslov (UIUC), Simon Liu (NYU), Patrick K. Koo.</p>
       </div>
-      <div class="col-sm-3 text-center">
-        <img src="src/placeholder_plm.png" alt="Protein language model attention map (placeholder)">
+      <div class="media-right hidden-xs">
+        <img class="media-object" src="src/placeholder_plm.png" alt="Protein language model (placeholder)">
       </div>
     </div>
   </div>
@@ -101,19 +131,18 @@
   <div class="bs-docs-section">
     <h3>Machine-Learning-Guided GWAS and Disease Prediction</h3>
   </div>
-
-  <div class="panel panel-default container proj-card">
-    <div class="row">
-      <div class="col-sm-9">
+  <div class="proj-card">
+    <div class="media">
+      <div class="media-body">
         <p>
-          I apply <b>machine learning</b> to enhance genome-wide association studies, integrating
-          clinical, environmental, and genetic data to uncover patterns that underlie complex diseases.
+          I apply <b>machine learning</b> to enhance genome-wide association studies, integrating clinical,
+          environmental, and genetic data to uncover patterns underlying complex diseases.
         </p>
-        <p><b>Status:</b> Ongoing project</p>
+        <p><span class="label label-info">Status</span> Ongoing project</p>
         <p><b>Collaborators:</b> William Stafford Noble (University of Washington) and the Mayo Clinic Center for Individualized Medicine.</p>
       </div>
-      <div class="col-sm-3 text-center">
-        <img src="src/placeholder_gwas.png" alt="GWAS schematic (placeholder)">
+      <div class="media-right hidden-xs">
+        <img class="media-object" src="src/placeholder_gwas.png" alt="GWAS schematic (placeholder)">
       </div>
     </div>
   </div>
@@ -122,98 +151,11 @@
   <div class="bs-docs-section">
     <h3>Transcriptional Regulation and Functional Genomics</h3>
   </div>
-
-  <div class="panel panel-default container proj-card">
-    <div class="row">
-      <div class="col-sm-9">
+  <div class="proj-card">
+    <div class="media">
+      <div class="media-body">
         <p>
-          I build models linking <b>promoter sequence, transcription-factor activity, and chromatin context</b> to gene-expression programs.
-          In <i>FUN-PROSE</i>, we predicted condition-specific expression in fungi from sequence and TF abundance, revealing interpretable motif–TF relationships.
-          I also contributed to a <i>transcriptomic atlas</i> of acid-stress response in multiple <i>Issatchenkia orientalis</i> strains, 
-          mapping conserved regulatory pathways underlying adaptation.
-        </p>
-        <p class="paper-list">
-          <b>Selected publications:</b><br>
-          • <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011563" target="_blank">FUN-PROSE: A Deep Learning Approach to Predict Condition-Specific Gene Expression in Fungi</a> (PLoS Comput Biol, 2023)<br>
-          • <a href="https://journals.asm.org/doi/10.1128/spectrum.02536-23" target="_blank">A Transcriptomic Atlas of Acute Stress Response to Low pH in Multiple <i>Issatchenkia orientalis</i> Strains</a> (Microbiology Spectrum, 2024)
-        </p>
-        <p><b>Collaborators:</b> Veronika Dubinkina (Gladstone Institutes), Sergei Maslov (UIUC), Simon Liu (NYU).</p>
-      </div>
-      <div class="col-sm-3 text-center">
-        <img src="src/placeholder_trn.png" alt="Regulatory motif or gene network diagram (placeholder)">
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== Diagnostics ==================== -->
-  <div class="bs-docs-section">
-    <h3>Diagnostics and Complex-Systems Methodology</h3>
-  </div>
-
-  <div class="panel panel-default container proj-card">
-    <div class="row">
-      <div class="col-sm-9">
-        <p>
-          I apply ideas from information theory and complex systems to biomedical diagnostics. 
-          Our <i>semi-quantitative group testing</i> framework enables efficient, accurate two-stage qPCR screening 
-          of pathogens across wide load ranges, achieving high throughput while preserving quantitative resolution.
-        </p>
-        <p class="paper-list">
-          <b>Selected publication:</b>
-          <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-024-05798-3" target="_blank">Semi-Quantitative Group Testing for Efficient and Accurate qPCR Screening of Pathogens with a Wide Range of Loads</a> (BMC Bioinformatics, 2024)
-        </p>
-        <p><b>Collaborators:</b> Mojtaba Cheraghchi (Imperial College London), Sergei Maslov (UIUC).</p>
-      </div>
-      <div class="col-sm-3 text-center">
-        <img src="src/placeholder_diag.png" alt="Group testing schematic (placeholder)">
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== Evolution of Technology ==================== -->
-  <div class="bs-docs-section">
-    <h3>Evolution and Classification of Technology</h3>
-  </div>
-
-  <div class="panel panel-default container proj-card">
-    <div class="row">
-      <div class="col-sm-9">
-        <p>
-          I investigate <b>innovation dynamics, diversity, and recombination</b> in technological ecosystems using patent and product datasets.
-          We modeled how novelty sustains open-ended innovation and quantified a long-term decline in product diversity among large U.S. firms.
-        </p>
-        <p class="paper-list">
-          <b>Selected publications:</b><br>
-          • <a href="https://direct.mit.edu/artl/article/25/1/33/2647/Open-Ended-Technological-Innovation" target="_blank">Open-Ended Technological Innovation</a> (Artificial Life, 2019)<br>
-          • <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0264330" target="_blank">Dropping Diversity of Products of Large US Firms: Models and Measures</a> (PLOS ONE, 2022)
-        </p>
-        <p><b>Collaborators:</b> Mark Bedau (Reed College), Norman Packard (ProtoLife), Tobias Rubel (UMD), J. Doyne Farmer (Oxford).</p>
-      </div>
-      <div class="col-sm-3 text-center">
-        <img src="src/placeholder_tech.png" alt="Technology evolution network (placeholder)">
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<footer role="contentinfo" style="margin-top:40px">
-  <div id="footer">
-    <div class="well well-sm">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2"><h4>Get in touch!</h4></div>
-          <div class="col-md-6"><h4>Email me at: annambiar [at] reed [dot] edu</h4></div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-12"><small>Last updated: October 14, 2025</small></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+          I build models linking <b>promoter sequence, transcription-factor activity, and chromatin context</b>
+          to gene-expression programs. In <i>FUN-PROSE</i>, we predicted condition-specific expression in fungi
+          from sequence and TF abundance, revealing interpretable motif–TF relationships. I also contributed to a
+          <i>transcriptomic atlas</i> of acid-stress response in multiple <i>Issatche
