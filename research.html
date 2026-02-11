@@ -88,16 +88,17 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed"
-        		data-toggle="collapse" data-target=".bs-navbar-collapse"
-        		aria-expanded="false">
-  		<span class="sr-only">Toggle navigation</span>
-  		<span class="icon-bar"></span>
-  		<span class="icon-bar"></span>
-  		<span class="icon-bar"></span>
-	</button>
+              data-toggle="collapse" data-target="#main-nav"
+              aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <a class="navbar-brand" href="index.html">Home</a>
     </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+    <nav id="main-nav" class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li class="active"><a href="research.html">Research</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -107,7 +108,6 @@
     </nav>
   </div>
 </header>
-
 <div class="page-header-band" id="content">
   <div class="container">
     <h2 style="margin:0;">Research</h2>
